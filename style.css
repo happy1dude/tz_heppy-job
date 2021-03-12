@@ -184,13 +184,14 @@ body {
 }
 
 .user {
-    width: 250px;
+    width: 275px;
     display: flex;
     flex-direction: column;
 }
 
 .user .user-wrap {
     display: flex;
+    justify-content: space-between;
 }
 
 .user-wrap:not(:last-child) {
@@ -202,8 +203,8 @@ body {
 }
 
 .title-user {
-    width: 95px;
-    padding: 0 10px 0 0;
+    width: 105px;
+    padding: 0 20px 0 0;
 }
 
 .count-user {
