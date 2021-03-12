@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham Pro';
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1aacf0;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .2);
+}
+
+.box .percent {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    padding: 40px 0 0 0;
+}
+
+.box .percent svg {
+    position: relative;
+    width: 240px;
+    height: 240px;
+}
+
+.box .percent svg circle {
+    width: 24px;
+    height: 240px;
+    fill: none;
+    stroke-width: 7;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 315;
+    stroke-dashoffset: 440;
+}
+
+.box .percent svg g:nth-child(1) circle {
+    stroke-dasharray: 614;
+    stroke-dashoffset: -70;
+    stroke: #ececec;   
+}
+
+.box .percent svg g:nth-child(2) circle {
+    stroke-dashoffset: -630;
+    stroke-dasharray: 410;
+    stroke: #fcd329;
+    animation: yellowLine .5s linear;
+    animation-delay: .5s;
+}
+
+.box .percent svg g:nth-child(3) circle {
+    stroke-dashoffset: -670;
+    stroke-dasharray: 500;
+    stroke: #70a84b;
+    animation: greenLine 1s ease-in;
+    animation-delay: .5s;
+}
+
+@keyframes yellowLine {
+    from {
+        stroke-dasharray: 630;
+        opacity: 0;
+    }
+    to {
+        stroke-dasharray: 631;
+        opacity: 1;
+    }
+    to {
+        stroke-dasharray: 410;
+    }
+}
+
+@keyframes greenLine {
+    from {
+        stroke-dasharray: 670;
+        opacity: 0;
+    }
+    to {
+        stroke-dasharray: 671;
+        opacity: 1;
+    }
+    to {
+        stroke-dasharray: 500;
+    }
+}
+
+.box .percent .flag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 25px 0 0 0;
+}
+
+.box .percent .flag object {
+    width: 30px;
+}
+
+.box .percent .number {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #555560;
+}
+
+.percent-wrapper {
+    display: flex;
+}
+
+.percent-wrapper h1 {
+    font-size: 40px;
+}
+
+.number .decimal {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.percent-in {
+    font-size: 20px;
+}
+
+.decimal-in {
+    font-size: 12px;
+}
+
+.text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-wrap p:nth-child(1) {
+    color: #fbd229;
+    font-size: 19px;
+}
+
+.text-wrap p:not(:first-child){
+    color: #b0b2b4;
+    font-size: 11px;
+}
+
+.svg_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.svg_wrap .index {
+    font-size: 20px !important;
+    color: #70a74b !important;
+}
+
+.svg_wrap object {
+    width: 30px;
+    height: 15px;
+}
+
+.user {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user .user-wrap {
+    display: flex;
+}
+
+.user-wrap:not(:last-child) {
+    padding: 0 0 20px 0;
+}
+
+.users-percent {
+    padding: 0 20px 0 0;
+}
+
+.title-user {
+    width: 95px;
+    padding: 0 10px 0 0;
+}
+
+.count-user {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.count-user > p {
+    color: #9d9d9c;
+    font-size: 15px;
+}
+
+.scale-percent {
+    width: 80px;
+    height: 30px;
+    border: 1px solid #9d9d9c;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.progress-line-in-percent {
+    width: 100%;
+    text-align: right;
+    padding: 0 5px 0 0;
+}
+
+.progress-line-in-percent {
+    position: absolute;
+    left: -80px;
+}
+
+
+.progress-line-in-percent > p {
+    font-size: 13px;
+}
+
+.progress-line > svg {
+    padding: 5px 0 0 0;
+}
+
+.green-progress > svg > rect {
+    height: 100%;
+    width: 40%;
+    rx: 5;
+    animation: greenProgress 1s ease-in;
+    animation-delay: .5s;
+}
+
+@keyframes greenProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 41%;
+    }
+
+}
+
+.yellow-progress > svg > rect {
+    height: 100%;
+    width: 39%;
+    rx: 5;
+    animation: yellowProgress 1s ease-in;
+    animation-delay: .5s;
+}
+
+@keyframes yellowProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 39%;
+    }
+
+}
+
+.red-progress > svg > rect {
+    height: 100%;
+    width: 27%;
+    rx: 5;
+    animation: redProgress 1s ease-in;
+    animation-delay: .5s;
+}
+
+@keyframes redProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 27%;
+    }
+
+}
